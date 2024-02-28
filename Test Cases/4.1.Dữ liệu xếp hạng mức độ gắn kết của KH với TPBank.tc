@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>4.1.Dữ liệu xếp hạng mức độ gắn kết của KH với TPBank</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>3969f1a7-24a2-416a-a73c-5f7abb86eadc</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>0c09ec0a-5869-4903-b400-ccf756485a80</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'/Include/files/ENGAGEMENT_STATUS_4.1/Insider.xlsx'</defaultValue>
+      <description></description>
+      <id>0c09ec0a-5869-4903-b400-ccf756485a80</id>
+      <masked>false</masked>
+      <name>filePath</name>
+   </variable>
+</TestCaseEntity>

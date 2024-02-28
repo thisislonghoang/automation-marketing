@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>4.3.Danh sách KH đăng ký mở thẻ Credit qua Ebank</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>0484c446-9c60-4b75-aef2-3a92c5ce7e78</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>ee88d320-6641-4abb-bc5e-72e23d3216e7</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_ODH</testDataId>
+   </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>9817d5f5-1717-415b-a0a4-ddb78807ff03</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_AUTO</testDataId>
+   </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>3796b43d-2f82-4203-8b0b-96da272a9632</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_INSIDER</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>387c66b7-cf8d-4d08-94c5-abce3e812158</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f1b99c2e-4458-4af7-8a15-e53fda6b56c3</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>4a08ba8c-fcd7-4456-8ec3-83ebbefb1d70</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'/Include/files/CREDIT_CARD_WHITELIST_4.3/ODH.xlsx'</defaultValue>
+      <description></description>
+      <id>387c66b7-cf8d-4d08-94c5-abce3e812158</id>
+      <masked>false</masked>
+      <name>ODH_FilePath</name>
+   </variable>
+   <variable>
+      <defaultValue>'/Include/files/CREDIT_CARD_WHITELIST_4.3/AUTOMKT.xlsx'</defaultValue>
+      <description></description>
+      <id>f1b99c2e-4458-4af7-8a15-e53fda6b56c3</id>
+      <masked>false</masked>
+      <name>AutoMKT_FilePath</name>
+   </variable>
+   <variable>
+      <defaultValue>'/Include/files/CREDIT_CARD_WHITELIST_4.3/INSIDER.xlsx'</defaultValue>
+      <description></description>
+      <id>4a08ba8c-fcd7-4456-8ec3-83ebbefb1d70</id>
+      <masked>false</masked>
+      <name>Insider_FilePath</name>
+   </variable>
+</TestCaseEntity>

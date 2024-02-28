@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>4.2.Khách hàng đã có thẻ credit chưa có Ebank</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>ccd85c2d-b314-4196-8225-72aff02841b0</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>ee88d320-6641-4abb-bc5e-72e23d3216e7</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_ODH</testDataId>
+   </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>9817d5f5-1717-415b-a0a4-ddb78807ff03</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_AUTO</testDataId>
+   </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>3796b43d-2f82-4203-8b0b-96da272a9632</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_INSIDER</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>41bdb982-6fa5-4aac-8247-f47dae569f02</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>4b8a13d0-a9de-44cd-befd-d8ce638e26a6</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>f3d5693a-c0ab-4f9a-b462-2d2fe2cd8ece</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'/Include/files/CREDIT_CARD_NO_EBANK_4.2/ODH.xlsx'</defaultValue>
+      <description></description>
+      <id>41bdb982-6fa5-4aac-8247-f47dae569f02</id>
+      <masked>false</masked>
+      <name>ODH_FilePath</name>
+   </variable>
+   <variable>
+      <defaultValue>'/Include/files/CREDIT_CARD_NO_EBANK_4.2/AUTOMKT.xlsx'</defaultValue>
+      <description></description>
+      <id>4b8a13d0-a9de-44cd-befd-d8ce638e26a6</id>
+      <masked>false</masked>
+      <name>AutoMKT_FilePath</name>
+   </variable>
+   <variable>
+      <defaultValue>'/Include/files/CREDIT_CARD_NO_EBANK_4.2/INSIDER.xlsx'</defaultValue>
+      <description></description>
+      <id>f3d5693a-c0ab-4f9a-b462-2d2fe2cd8ece</id>
+      <masked>false</masked>
+      <name>Insider_FilePath</name>
+   </variable>
+</TestCaseEntity>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>4.4.Nhóm KH shop đã xác thực</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>00e685d0-0c6d-4842-8a6d-b7787d1efaba</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>ee88d320-6641-4abb-bc5e-72e23d3216e7</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_ODH</testDataId>
+   </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>9817d5f5-1717-415b-a0a4-ddb78807ff03</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_AUTO</testDataId>
+   </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>3796b43d-2f82-4203-8b0b-96da272a9632</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_INSIDER</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5f341890-bc49-463b-83bc-4ded44e99da8</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>2155a78e-55f4-4572-b8d4-434e3f00d11b</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>5e5c602d-98ba-4525-bc3d-1362bd338407</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'/Include/files/SHOP_VERIFIED_4.4/ODH.xlsx'</defaultValue>
+      <description></description>
+      <id>5f341890-bc49-463b-83bc-4ded44e99da8</id>
+      <masked>false</masked>
+      <name>ODH_FilePath</name>
+   </variable>
+   <variable>
+      <defaultValue>'/Include/files/SHOP_VERIFIED_4.4/AUTOMKT.xlsx'</defaultValue>
+      <description></description>
+      <id>2155a78e-55f4-4572-b8d4-434e3f00d11b</id>
+      <masked>false</masked>
+      <name>AutoMKT_FilePath</name>
+   </variable>
+   <variable>
+      <defaultValue>'/Include/files/SHOP_VERIFIED_4.4/INSIDER.xlsx'</defaultValue>
+      <description></description>
+      <id>5e5c602d-98ba-4525-bc3d-1362bd338407</id>
+      <masked>false</masked>
+      <name>Insider_FilePath</name>
+   </variable>
+</TestCaseEntity>

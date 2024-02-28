@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>test</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>f2c380a0-2f83-48ce-a70f-ee66e592135c</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>ee88d320-6641-4abb-bc5e-72e23d3216e7</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_ODH</testDataId>
+   </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>9817d5f5-1717-415b-a0a4-ddb78807ff03</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_AUTO</testDataId>
+   </testDataLinks>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>3796b43d-2f82-4203-8b0b-96da272a9632</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/4.2/ID_INSIDER</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ba6d223d-9029-43f3-a2e1-fa434b842ef5</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>ab0a32d8-7c14-4cc5-a0a9-174c7cf75190</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>7713b93e-cbcd-4cdb-957c-9d83070b6efb</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'/Include/files/test/ODH.xlsx'</defaultValue>
+      <description></description>
+      <id>ba6d223d-9029-43f3-a2e1-fa434b842ef5</id>
+      <masked>false</masked>
+      <name>ODH_FilePath</name>
+   </variable>
+   <variable>
+      <defaultValue>'/Include/files/test/AUTOMKT.xlsx'</defaultValue>
+      <description></description>
+      <id>ab0a32d8-7c14-4cc5-a0a9-174c7cf75190</id>
+      <masked>false</masked>
+      <name>AutoMKT_FilePath</name>
+   </variable>
+   <variable>
+      <defaultValue>'/Include/files/test/INSIDER.xlsx'</defaultValue>
+      <description></description>
+      <id>7713b93e-cbcd-4cdb-957c-9d83070b6efb</id>
+      <masked>false</masked>
+      <name>Insider_FilePath</name>
+   </variable>
+</TestCaseEntity>

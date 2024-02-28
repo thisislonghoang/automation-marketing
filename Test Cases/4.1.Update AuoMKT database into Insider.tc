@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>4.1.Update AuoMKT database into Insider</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>5c2e69f5-60c2-4b1d-b8b8-70aef513cf9c</testCaseGuid>
+   <testDataLinks>
+      <combinationType>ONE</combinationType>
+      <id>6effa8d7-7f6c-41bf-b502-d7ec4f97bd6b</id>
+      <iterationEntity>
+         <iterationType>ALL</iterationType>
+         <value></value>
+      </iterationEntity>
+      <testDataId>Data Files/ENGAGEMENT_STATUS/updateAutoMKT</testDataId>
+   </testDataLinks>
+   <variableLinks>
+      <testDataLinkId>6effa8d7-7f6c-41bf-b502-d7ec4f97bd6b</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>stt</value>
+      <variableId>e6c5974c-b308-4c44-a214-98c2da68b13d</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>6effa8d7-7f6c-41bf-b502-d7ec4f97bd6b</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>iid</value>
+      <variableId>a1c3d63a-08a0-420e-a7d5-bb017724d12d</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId>6effa8d7-7f6c-41bf-b502-d7ec4f97bd6b</testDataLinkId>
+      <type>DATA_COLUMN</type>
+      <value>engagementRank</value>
+      <variableId>720c8a93-8b2a-40be-a3e1-9f2a16d917b3</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>e6c5974c-b308-4c44-a214-98c2da68b13d</id>
+      <masked>false</masked>
+      <name>stt</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>a1c3d63a-08a0-420e-a7d5-bb017724d12d</id>
+      <masked>false</masked>
+      <name>iid</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>720c8a93-8b2a-40be-a3e1-9f2a16d917b3</id>
+      <masked>false</masked>
+      <name>engagementRank</name>
+   </variable>
+</TestCaseEntity>

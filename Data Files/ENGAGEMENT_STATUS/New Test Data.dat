@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFileEntity>
+   <description></description>
+   <name>New Test Data</name>
+   <tag></tag>
+   <connectionProperties/>
+   <containsHeaders>true</containsHeaders>
+   <csvSeperator></csvSeperator>
+   <dataFileGUID>b60a2cfe-2208-4143-835c-cabc598cd526</dataFileGUID>
+   <dataSourceUrl></dataSourceUrl>
+   <driver>DBData</driver>
+   <driverClassName></driverClassName>
+   <isInternalPath>false</isInternalPath>
+   <password></password>
+   <query>with list_cust as (
+select distinct cus.customer_number, odh_uat.smv2_get_text('com_dictionary','CSTS'||ici.status) CREDIT_CARD_STATUS
+from odh_uat.smv2_iss_card_instance ici  
+join odh_uat.smv2_iss_card ic on ic.id = ici.card_id
+join odh_uat.smv2_prd_contract pc on pc.id = ic.contract_id
+join odh_uat.smv2_prd_customer cus on cus.id = ic.customer_id
+where ici.status = 'CSTS0000'
+and ici.is_last_seq_number = 1
+and pc.contract_type in ( 'CNTPVSCC','CNTPMCCC','CNTPJCBC')
+),
+data_config_last as
+ (select ENCRYPT_CODE
+    from odh_uat.CSTB_CDH_ENCRYPT_CONFIG
+   where rownum = 1
+   order by RUN_DATE desc),
+data_category as 
+  (
+  select t.customer_id, t2.mcc_name_vn
+    from
+    (select sum(nvl(LCY, 0)) sum_lcy, Mcc_Code, customer_id, rank() over(partition by customer_id order by sum(nvl(LCY, 0)), Mcc_Code desc ) idx 
+    from odh.TWT_SMV2_SPENDING_CATEGORY 
+    where trunc(oper_date) between ADD_MONTHS(TO_DATE('20231231', 'YYYYMMDD'), -3) and TO_DATE('20231231', 'YYYYMMDD') group by Mcc_Code, customer_id
+    having sum(nvl(LCY, 0)) != 0) t
+    left join odh.hbk_card_mcc_category_tag t2 on t.Mcc_Code = t2.Mcc_Code
+    where t.idx = 1
+)
+
+select
+(select ENCRYPT_CODE from data_config_last)||odh_uat.FN_CDH_ENCRYPT_IID(SUBSTR(REPLACE(a.customer_number, '  ', ''), 1, 8)) IID
+,a.CREDIT_CARD_STATUS
+,case --when sum(t4.totalcoin) between 0 and 5000 then '0 -  5,000'
+    when sum(nvl(t4.totalcoin, 0)) between 5001 and 10000 then '5,001 - 10,000'
+      when sum(nvl(t4.totalcoin, 0)) between 10001 and 20000 then '10,001 - 20,000'
+        when sum(nvl(t4.totalcoin, 0)) between 20001 and 50000 then '20,001 - 50,000'
+          when sum(nvl(t4.totalcoin, 0)) between 50001 and 100000 then '50,001 - 100,000'
+            when sum(nvl(t4.totalcoin, 0)) between 100001 and 200000 then '100,001 - 200,000'
+              when sum(nvl(t4.totalcoin, 0)) between 200001 and 500000 then '200,001 - 500,000'
+                when sum(nvl(t4.totalcoin, 0)) between 500001 and 850000 then '500,001 - 850,000'
+                  when sum(nvl(t4.totalcoin, 0)) > 850000 then '> 850,000' 
+                    else '0 -  5,000' end LOYALTY_POINTS
+,t5.mcc_name_vn FAVORITE_CATEGORY
+,t.full_name tpb_name
+,t2.e_mail tpb_email
+from list_cust a
+left join odh_uat.fcc_sttm_customer t on a.customer_number = t.CUSTOMER_NO
+left join odh_uat.FCC_STTM_CUST_PERSONAL t2 on t.customer_no = t2.customer_no
+left join ODH_UAT.LOY_MEMBER t3 on t.customer_no = t3.cif
+left join ODH_UAT.LOY_MEMBER_LOYALTY_REWARD t4 on t3.id = t4.memberid
+left join data_category t5 on t.customer_no = t5.customer_id
+where not exists (select 1 from odh.hbk_customer a where a.cif_number = t.CUSTOMER_NO )
+and t.CUSTOMER_TYPE = 'I' 
+and (t4.totalcoin is null or t4.totalcoin &lt; 5000)
+group by a.customer_number, a.CREDIT_CARD_STATUS,t5.mcc_name_vn,t.full_name,t2.e_mail;</query>
+   <secureUserAccount>false</secureUserAccount>
+   <sheetName></sheetName>
+   <user></user>
+   <usingGlobalDBSetting>true</usingGlobalDBSetting>
+</DataFileEntity>
